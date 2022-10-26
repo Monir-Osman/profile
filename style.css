@@ -275,13 +275,13 @@ footer > p:hover {
   opacity: 1;
   transition: 0.2s ease-in-out;
 }
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .header > .cloud__top {
     right: 15%;
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media (max-width: 900px) {
   .header > .cloud__top {
     right: 8%;
   }
@@ -290,7 +290,7 @@ footer > p:hover {
     top: 45%;
   }
 }
-@media only screen and (max-width: 600px) {
+@media (max-width: 650px) {
   .header > .cloud__top {
     right: 8%;
     top: 15%;
