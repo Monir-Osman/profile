@@ -95,6 +95,7 @@ div.social__icons {
   margin-left: 40px;
   text-align: start;
   position: relative;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.257);
 }
 .profile__text__container > h1 {
   font-family: "Ropa Sans", sans-serif;
@@ -130,6 +131,7 @@ div.social__icons {
   border-radius: 10px;
   margin-left: 40px;
   text-align: start;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.257);
 }
 .skills__container::before {
   content: "";
