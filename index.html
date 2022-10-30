@@ -12,7 +12,7 @@
     <title>Monir Osmani</title>
   </head>
   <body onload="handleLoad()">
-    <div>
+    <div class="root">
       <header class="header">
         <img id="cloud1" class="cloud__top" src="/profile/images/cloud.png" alt="cloud" />
         <h1>Monir Osmani</h1>
@@ -117,7 +117,16 @@
       const cloud2 = document.getElementById("cloud2");
 
       const handleScroll = (e) => {
-        if (window.innerWidth > 650) {
+        if (window.innerWidth < 650) {
+          if (window.scrollY > 60) {
+            myImage.classList.add("visible");
+            myText.classList.add("visible");
+          }
+          if (window.scrollY > 200) {
+            myText2.classList.add("visible");
+            myImage2.classList.add("visible");
+          }
+        } else {
           if (window.scrollY > 270 && window.scrollY < 1100) {
             myImage.classList.add("visible");
             myText.classList.add("visible");
@@ -132,19 +141,8 @@
             myText2.classList.remove("visible");
             myImage2.classList.remove("visible");
           }
-        } else {
-          if (window.scrollY > 70) {
-            myImage.classList.add("visible");
-            myText.classList.add("visible");
-            console.log(window.scrollY);
-          }
-          if (window.scrollY > 200) {
-            myText2.classList.add("visible");
-            myImage2.classList.add("visible");
-          }
         }
       };
-
       const handleLoad = () => {
         cloud1.classList.add("visible");
         cloud2.classList.add("visible");

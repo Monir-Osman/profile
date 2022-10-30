@@ -20,6 +20,7 @@ hr {
 .header {
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 .header > .cloud__top {
   position: absolute;
@@ -83,6 +84,7 @@ div.social__icons {
   align-items: center;
   margin-top: 80px;
   flex-direction: column;
+  overflow: hidden;
 }
 .profile {
   display: flex;
