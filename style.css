@@ -19,6 +19,7 @@ hr {
 }
 .header {
   position: relative;
+  height: 100vh;
 }
 .header > .cloud__top {
   position: absolute;
@@ -26,9 +27,14 @@ hr {
   top: 3rem;
   width: 230px;
 }
-.header > .mountain {
-  padding-top: 3.6rem;
+.header > .mountain__container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
 }
+
 .header > .cloud__bottom {
   position: absolute;
   left: 20%;
@@ -303,13 +309,12 @@ footer > p:hover {
     top: 55%;
     width: 130px;
   }
-  .header > .mountain {
-    padding-top: 7.6rem;
+  .header > .mountain__container > .mountain {
     width: 390px;
   }
   .header > h1 {
     font-size: 50px;
-    padding-top: 10rem;
+    padding-top: 14rem;
   }
   .profile {
     flex-direction: column;
