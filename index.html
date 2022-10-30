@@ -11,10 +11,10 @@
     <script src="https://kit.fontawesome.com/3d67cc4947.js" crossorigin="anonymous"></script>
     <title>Monir Osmani</title>
   </head>
-  <body>
+  <body onload="handleLoad()">
     <div>
       <header class="header">
-        <img class="cloud__top" src="/profile/images/cloud.png" alt="cloud" />
+        <img id="cloud1" class="cloud__top" src="/profile/images/cloud.png" alt="cloud" />
         <h1>Monir Osmani</h1>
         <h2>Front-end developer</h2>
         <div class="social__icons">
@@ -36,7 +36,7 @@
             </li>
           </ul>
         </div>
-        <img class="cloud__bottom" src="/profile/images/cloud.png" alt="cloud" />
+        <img id="cloud2" class="cloud__bottom cloud" src="/profile/images/cloud.png" alt="cloud" />
 
         <div class="mountain__container">
           <img class="mountain" src="/profile/images/mountain.png" alt="mountain" />
@@ -45,8 +45,8 @@
       <hr />
       <section class="content">
         <div class="profile">
-          <img src="/profile/images/man.png" alt="man" />
-          <div class="profile__text__container">
+          <img id="myImg" class="my__image" src="/profile/images/man.png" alt="man" />
+          <div id="myText" class="profile__text__container">
             <h1>About Me</h1>
             <p>
               Hi dear, my name is Monir! I am a front-end developer, I have been coding for more
@@ -60,8 +60,13 @@
         </div>
 
         <div class="skills">
-          <img src="/profile/images/programming.png" alt="porgrammig image" />
-          <div class="skills__container">
+          <img
+            id="myImg2"
+            class="my__image2"
+            src="/profile/images/programming.png"
+            alt="porgrammig image"
+          />
+          <div id="myText2" class="skills__container">
             <h1>Skills</h1>
             <p>My programming language proficiency</p>
             <span>Html</span>
@@ -103,5 +108,49 @@
         <p>&copy;Monir Osmani</p>
       </footer>
     </div>
+    <script>
+      const myImage = document.getElementById("myImg");
+      const myText = document.getElementById("myText");
+      const myImage2 = document.getElementById("myImg2");
+      const myText2 = document.getElementById("myText2");
+      const cloud1 = document.getElementById("cloud1");
+      const cloud2 = document.getElementById("cloud2");
+
+      const handleScroll = (e) => {
+        if (window.innerWidth > 650) {
+          if (window.scrollY > 270 && window.scrollY < 1100) {
+            myImage.classList.add("visible");
+            myText.classList.add("visible");
+          } else {
+            myImage.classList.remove("visible");
+            myText.classList.remove("visible");
+          }
+          if (window.scrollY > 550) {
+            myText2.classList.add("visible");
+            myImage2.classList.add("visible");
+          } else {
+            myText2.classList.remove("visible");
+            myImage2.classList.remove("visible");
+          }
+        } else {
+          if (window.scrollY > 70) {
+            myImage.classList.add("visible");
+            myText.classList.add("visible");
+            console.log(window.scrollY);
+          }
+          if (window.scrollY > 200) {
+            myText2.classList.add("visible");
+            myImage2.classList.add("visible");
+          }
+        }
+      };
+
+      const handleLoad = () => {
+        cloud1.classList.add("visible");
+        cloud2.classList.add("visible");
+      };
+
+      document.addEventListener("scroll", handleScroll);
+    </script>
   </body>
 </html>

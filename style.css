@@ -30,7 +30,7 @@ hr {
 .header > .mountain__container {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: 1%;
   display: flex;
   justify-content: center;
 }
@@ -298,7 +298,7 @@ footer > p:hover {
     top: 45%;
   }
 }
-@media (max-width: 650px) {
+@media only screen and (max-width: 650px) {
   .header > .cloud__top {
     right: 8%;
     top: 15%;
@@ -366,4 +366,69 @@ footer > p:hover {
     font-size: 20px;
     color: #b9fff8;
   }
+}
+
+/* css animation */
+.my__image2,
+.my__image {
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+  -moz-transform: translateX(-100px);
+  -ms-transform: translateX(-100px);
+  -o-transform: translateX(-100px);
+  transform: translateX(-100px);
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.skills__container,
+.profile__text__container {
+  opacity: 0;
+  -webkit-transform: translateX(150px);
+  -moz-transform: translateX(150px);
+  -ms-transform: translateX(150px);
+  -o-transform: translateX(150px);
+  transform: translateX(150px);
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+.cloud__top {
+  opacity: 0;
+  -webkit-transform: translateX(150px);
+  -moz-transform: translateX(150px);
+  -ms-transform: translateX(150px);
+  -o-transform: translateX(150px);
+  transform: translateX(150px);
+  -webkit-transition: all 1.5s ease-out;
+  -moz-transition: all 1.5s ease-out;
+  -ms-transition: all 1.5s ease-out;
+  -o-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+}
+.cloud__bottom {
+  opacity: 0;
+  -webkit-transform: translateX(-150px);
+  -moz-transform: translateX(-150px);
+  -ms-transform: translateX(-150px);
+  -o-transform: translateX(-150px);
+  transform: translateX(-150px);
+  -webkit-transition: all 1.5s ease-out;
+  -moz-transition: all 1.5s ease-out;
+  -ms-transition: all 1.5s ease-out;
+  -o-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+}
+.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
