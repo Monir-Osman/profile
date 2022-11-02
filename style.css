@@ -209,7 +209,8 @@ div.social__icons {
   background-color: #f34f29;
 }
 section.content > div.contact {
-  margin-top: 100px;
+  margin-top: 90px;
+  padding: 10px;
 }
 div.contact > h1 {
   font-size: 50px;
